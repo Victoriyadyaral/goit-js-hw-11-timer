@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIMER</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <section>
+        <h1 class="title">Countdown timer</h1>
+        <p>Do you want to know how many days, hours and minutes are left before the event? Just enter the date!</p>
+        <form>
+            <div class="form-container">
+                <label class="form__label">
+                    <span class="form__data">Day</span>
+                    <input class="form__input" type="number" min="1" max="31" name="date" placeholder="01" data-value="current-days" autocomplete="off"/>
+                </label>
+                <label class="form__label">
+                    <span class="form__data">Month</span>
+                    <input class="form__input" type="number" min="1" max="12" name="data" placeholder="01" data-value="current-month" autocomplete="off"/>
+                </label>
+                <label class="form__label">
+                    <span class="form__data">Year</span>
+                    <input class="form__input" type="number" min="2021" max="2100" name="data"  placeholder="2021" data-value="current-year" autocomplete="off"/>
+                </label>
+            </div>
+        </form>
+        <button type="submit" class="section__button" data-action="add-date">Add the date</button>
+<div class="timer" id="timer-1">
+    <div class="field">
+        <span class="value" data-value="days">00</span>
+        <span class="label">Days</span>
+    </div>
+
+    <div class="field">
+        <span class="value" data-value="hours">00</span>
+        <span class="label">Hours</span>
+    </div>
+
+    <div class="field">
+        <span class="value" data-value="mins">00</span>
+        <span class="label">Minutes</span>
+    </div>
+
+    <div class="field">
+        <span class="value" data-value="secs">00</span>
+        <span class="label">Seconds</span>
+    </div>
+</div>
+<button type="button" class="section__button" data-action="remove-timer">Remove timer</button>
+</section>
+
+<script src="timer.js" type="module"></script>
+</body>
+</html>
